@@ -45,6 +45,9 @@ app.post('/inventory/update', (req, res) => {
         res.status(200).json({ message: 'Inventory updated successfully' });
     }, 10000); // 10000 milliseconds = 10 seconds
     */
+    app.get('/inventory', (req, res) => {
+        res.status(200).json(inventory);
+    });
 });
 
 app.listen(PORT, () => {
